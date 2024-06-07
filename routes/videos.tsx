@@ -1,6 +1,6 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
 import {Video} from "../types.ts";
-//import VideoList from "../components/VideoList.tsx"
+import VideoList from "../components/VideoList.tsx"
 type State = {
     id: string;
     name: string;
@@ -30,7 +30,7 @@ export const handler: Handlers<Data, State> = {
 const Page = (props: PageProps<Data>)=>{
     <div class="video-page-container">
         <h1 className="video-list-title">Curso Deno Fresh</h1>
-        {/* <VideoList videos={props.data.videos} userid={props.data.userid}/> */}
+        <VideoList videos={props.data.videos} userid={props.data.userid}/> 
     </div>
 }
 
